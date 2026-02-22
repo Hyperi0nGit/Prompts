@@ -36,6 +36,12 @@ sdcard/
 storage/
 *.tmp
 
+# Adding sudo configuration (local machine #only)
+sudoers
+sudoers.d/
+etc/sudoers
+etc/sudoers.d/
+
 # =========================
 # Acode editor
 # =========================
