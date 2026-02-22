@@ -1,65 +1,5 @@
 # =========================
-# Archives & packages
-# =========================
-*.tar
-*.tar.*
-*.tgz
-*.zip
-*.apk
-*.jar
-*.exe
-*.msi
-*.deb
-*.sig
-
-# =========================
-# Alpine / build artifacts
-# =========================
-pkg/
-dist/
-build/
-out/
-target/
-*.abuild
-*.apk.tar.gz
-
-# =========================
-# Logs
-# =========================
-*.log
-*.log.*
-
-# =========================
-# Android noise
-# =========================
-sdcard/
-storage/
-*.tmp
-
-# Adding sudo configuration (local machine #only)
-sudoers
-sudoers.d/
-etc/sudoers
-etc/sudoers.d/
-
-# =========================
-# Acode editor
-# =========================
-.acode/
-.history/
-.vscode/
-.idea/
-
-# =========================
-# OS junk
-# =========================
-.DS_Store
-Thumbs.db
-desktop.ini
-*~
-
-# =========================
-# Environment & secrets
+# 🔒 Security-sensitive
 # =========================
 .env
 .env.*
@@ -67,13 +7,83 @@ desktop.ini
 *.pem
 *.key
 *.p12
+*.secret
+*.credentials
+
+# Sudo configuration
+sudoers
+sudoers.d/*
+etc/sudoers
+etc/sudoers.d/*
+!sudoers.example
+!sudoers.d/*.example
+
+# SSH private keys
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+
+# Optional: ignore public keys only if desired
+# id_rsa.pub
+# id_ed25519.pub
 
 # =========================
-# Language caches (safe defaults)
+# 📦 Alpine / abuild
+# =========================
+pkg/
+packages/
+dist/
+build/
+out/
+target/
+*.apk
+*.apk.tar.gz
+*.abuild
+
+# abuild working dirs
+src/*.tar.gz
+
+# =========================
+# 🧾 Logs & temp
+# =========================
+*.log
+*.log.*
+*.tmp
+*.temp
+.cache/
+coverage/
+
+# =========================
+# 📱 Android / Termux noise
+# =========================
+sdcard/
+storage/
+Download/
+Android/
+
+# =========================
+# ✏️ Editors (Acode + common)
+# =========================
+.acode/
+.history/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+# 🧠 Language caches (safe defaults)
 # =========================
 __pycache__/
 node_modules/
 .venv/
 venv/
-.cache/
-coverage/
+
+# =========================
+# 💻 OS junk
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
