@@ -1,15 +1,73 @@
+# =========================
+# Archives & packages
+# =========================
 *.tar
 *.tar.*
+*.tgz
+*.zip
+*.apk
 *.jar
 *.exe
 *.msi
 *.deb
-*.zip
-*.tgz
+*.sig
+
+# =========================
+# Alpine / build artifacts
+# =========================
+pkg/
+dist/
+build/
+out/
+target/
+*.abuild
+*.apk.tar.gz
+
+# =========================
+# Logs
+# =========================
 *.log
 *.log.*
-*.sig
-.gitconfig
-.gitignore
-pkg/
-src/
+
+# =========================
+# Android noise
+# =========================
+sdcard/
+storage/
+*.tmp
+
+# =========================
+# Acode editor
+# =========================
+.acode/
+.history/
+.vscode/
+.idea/
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# =========================
+# Environment & secrets
+# =========================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# =========================
+# Language caches (safe defaults)
+# =========================
+__pycache__/
+node_modules/
+.venv/
+venv/
+.cache/
+coverage/
