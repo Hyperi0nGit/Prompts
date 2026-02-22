@@ -9,6 +9,7 @@
 *.log
 *.log.*
 *.sig
-
+.gitconfig
+.gitignore
 pkg/
 src/
